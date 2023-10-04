@@ -1,0 +1,70 @@
+@import url('https://fonts.cdnfonts.com/css/more-sugar');
+@import url('https://fonts.cdnfonts.com/css/kodchasan');            
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../Data/backgroundSinhNhat.png);
+    background-size: 100% 100%;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+    /* position: relative; */
+    align-items: center;
+}
+.top10{
+    margin-top: 5%;
+    width: 50%;
+    height: auto;
+    min-height: 30%;
+    background-image: linear-gradient(to bottom, #7F7DFA, #C3ABE8, #F7A87C);
+    border-radius: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0.9;
+    animation: bouncing 1s infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+@keyframes bouncing {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+h1{
+    font-family: 'kodchasan';
+    font-weight:600;
+    color: #15028B;
+    font-size: 40px;
+}
+.title{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+.title_name, .title_point{
+    font-family: 'kodchasan';
+    font-weight:600;
+    color: #15028B;
+    font-size: 35px;
+    width:50%;
+}
+.infor{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+}
+.infor_name, .infor_point{
+    font-family: 'kodchasan';
+    font-weight:600;
+    color: #15028B;
+    font-size: 25px;
+    width:50%;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/quiztieuhoc-final.css">
+    <title>Quiz-Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/nguphap.css">
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+    </style>
+    <!--QUIZ-QUESTION-->
+    <nav class="head">
+        <div class="logo">
+            <a href="#"><img src="../Data/Logo.png" alt="logo"></a>
+        </div>
+        <span
+            style="font-size: 50px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-weight: 800;">·</span>
+        <span
+            style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Ôn tập</span>
+
+        <div class="search">
+            <div class="icon">
+                <img src="../Data/search (1).png" alt="search">
+            </div>
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+        <span style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Tiểu học</span>
+        <div id="chucnang">
+            <div id="avatar">
+                <div id="anh">
+                    <img src="../Data/Avatar.png" alt="avatar">
+                    
+                </div>
+                <div id="login_out">
+                    <div id="login">
+                        <img src="../Data/icon sign in.png" alt="login">
+                        <a href="./login.html">Đăng nhập</a>
+                    </div>
+                    <div id="setting">
+                        <img src="../Data/icon setting.png" alt="setting">
+                        <a href="./caidat.html">Cài đặt</a>
+                    </div>
+                    <div id="logout">
+                        <img src="../Data/icon log out.png" alt="logout">
+                        <a href="./login.html">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="wrapper">
+        <div class="quiz">
+            <div class="quiz_header">
+                <div class="quiz_user">
+                    <h4>WELCOME ! <span class="name"></span></h4>
+                </div>
+            </div>
+
+            <div class="quiz_body">
+                <div id="questions">
+
+              <!-- <ul class="option_group">
+              <li class="option">option 1</li>
+              <li class="option">option 2</li>
+              <li class="option">option 3</li>
+              <li class="option">option 4</li>
+              </ul> -->
+                </div>
+
+                <button class="btn-next" onclick="next()">Câu hỏi tiếp theo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/quiztieuhoc.js"></script>
+    <script src="../js/userinfo.js"></script>
+</body>
+</html>

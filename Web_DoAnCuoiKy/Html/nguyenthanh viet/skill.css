@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    height: 100vh;
+}
+header {
+    height: 10%;
+    background-color:#24292f;
+}
+p{
+    font-size: 25px;
+    font-weight: 600;
+}
+.navbar{
+    height: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    width: 40%;
+    justify-content: space-around;
+}
+.navbar a{
+    font-size:  18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active
+{
+    color: #0ef;
+}
+h1{
+    margin-top: 2%;
+    text-align: center;
+}
+.myskills
+{
+    margin-top: 1%;
+    margin-left: 1%;
+    border: 2px solid #24292f;
+    padding:10px;
+    box-sizing: border-box;
+}
+.skills {
+    text-align: right;
+    padding-right: 20px;
+    line-height: 40px;
+    color: white;
+  }
+  
+  .html {
+    width: 90%; 
+    background-color: #4CAF50; 
+    display: inline-block;
+    animation: html5 2s ease-out;
+  }
+  
+  .css {
+    width: 80%; 
+    background-color: #2196F3;
+    animation: css3 2s ease-out;
+  }
+  .js {
+    width: 75%; 
+    background-color: yellow;
+    animation: js 2s ease-out;
+  }
+  .Rails {
+    width: 70%; 
+    background-color: plum;
+    animation: Rails 2s ease-out;
+  }
+  .Tailwind{
+    width: 60%;
+    background-color: #0ef;
+    animation: Tailwind 2s ease-out;
+  }
+  .Laraveal{
+    width: 80%;
+    background-color:  #f44336;
+    animation: Laraveal 2s ease-out;
+  }
+  .NET
+  {
+    width: 70%;
+    background-color:deeppink;
+    animation:  NET 2s ease-out;
+  }
+  .django{
+    width: 80%;
+    background-color:cornflowerblue;
+    animation: django 2s ease-out;
+  }
+  @keyframes django {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes NET {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 70%;
+    }
+  }
+  @keyframes html5 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 90%;
+    }
+  }
+  @keyframes css3 {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 80%;
+    }
+  }
+  @keyframes js {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 75%;
+    }
+  }
+  @keyframes Rails {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 70%;
+    }
+    }
+  @keyframes Tailwind {
+        0% {
+          width: 0px;
+        }
+        100% {
+          width: 60%;
+    }
+    }
+    @keyframes Laraveal {
+        0% {
+          width: 0px;
+        }
+        100% {
+          width: 80%;
+    }
+}

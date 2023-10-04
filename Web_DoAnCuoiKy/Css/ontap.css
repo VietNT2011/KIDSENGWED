@@ -1,0 +1,177 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    cursor: url('../Data/sea-snail\ 5.png'), auto;
+    background-image: url('../Data/ontap/backgroundontap.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    cursor: url('../Data/starfish.png'), auto;
+}
+.head {
+    display: flex;
+    align-items:center ;
+    background-color: rgb(7, 62, 108);
+}
+.left {
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 35%;
+}
+#ontap {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#dot
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+.right {
+    display: flex;
+    width: 65%;
+    align-items: center;
+    justify-content: center;
+}
+#search {
+    height: fit-content;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 60px;
+    border-style: solid ;
+    display: flex;
+    background-color: white;
+    flex: 1;
+}
+#chucnang {
+    display: flex;
+    justify-content: flex-end;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#chucnang a {
+    color: white;
+    font-weight: bold;
+}
+#chucnang > a,#chucnang div{
+    flex: 1;
+   text-align: center;
+}
+#capbac {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#icon img{
+    width: 25px;
+    align-items: center;
+}
+#logo img {
+    width: 270px;
+    float: left;
+    padding-bottom: 5px;
+}
+#anh img {
+    width: 50;
+}
+#search,#chucnang,#avatar{
+    flex:1;
+    align-items: center;
+}
+#avatar{
+    position: relative;
+    float: right;
+}
+#login_out{
+    display: none;
+    position: absolute;
+    left: -60px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid lightblue;
+    height: fit-content;
+    padding: 5px;
+    background-color: lightblue;
+}
+#login_out div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+}
+#login_out div img{
+    width: auto;
+    height: max-content;
+    margin-right: 5px;
+}
+#login_out div p{
+margin: 0;
+}
+#login, #setting, #logout{
+    border-width: 1px;
+    border-radius: 17px;
+    border-style: solid rgb(4, 126, 178);
+    height: fit-content;
+    background-color: rgb(4, 126, 178);
+}
+#login img {
+    width: 70%;
+    height: auto;
+}
+#search input{
+    flex: 1;
+    height: fit-content;
+    border: none;
+}
+#trangchu:hover, #trangchu:active,  #gioithieu:hover, #gioithieu:active, #khoahoc:hover, #khoahoc:active{
+    border: 1px solid rgb(10, 107, 168);
+    border-radius: 50px;
+    height: fit-content;
+    padding: 1px;
+    background-color:rgb(10, 107, 168);
+}
+#trangchu, #gioithieu, #khoahoc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#avatar:hover  #login_out{
+display: block;
+}
+#anh img:hover, #anh img:active {
+    opacity: 20%;
+}
+#login:hover, #login:active, #setting:hover,  #setting:active, #logout:hover, #logout:active{
+    opacity: 60%;
+}
+input:focus {
+    outline: none;
+}
+#logomain {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.image {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+#maugiao, #tieuhoc, #nguphap {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}

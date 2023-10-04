@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+a {
+    cursor: url('../Data/starfish.png');
+}
+.footer a:hover {
+    text-decoration: underline;
+  }
+
+ul {
+    list-style: none;
+}
+p:first-line {
+    text-indent: 40px;
+  }
+  p {
+    text-indent: 10px;
+  }
+  h1, h2 {
+    font-family: 'Vollkorn', serif;
+  }
+.head {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+    background-color: rgb(7, 62, 108);
+}
+.search {
+    height: fit-content;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 60px;
+    border-style: solid ;
+    display: flex;
+    background-color: white;
+}
+#chucnang {
+    display: flex;
+    justify-content: flex-end;
+}
+#chucnang p {
+    color: white;
+    font-weight: bold;
+}
+#chucnang > p,#chucnang div{
+    flex: 1;
+    text-align: center;
+}
+.icon img{
+    width: 25px;
+}
+.logo img {
+    width: 270px;
+}
+#anh img {
+    width: 50;
+}
+.search, #chucnang, .avatar{
+    flex:1;
+    align-items: center;
+}
+#avatar{
+    position: relative;
+}
+#login_out{
+    display: none;
+    position: absolute;
+    left: -60px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid lightblue;
+    height: fit-content;
+    padding: 5px;
+    background-color: lightblue;
+}
+#login_out div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+}
+#login_out div img{
+    width: auto;
+    height: max-content;
+    margin-right: 5px;
+}
+#login_out div a{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+#login, #setting, #logout{
+    border-width: 1px;
+    border-radius: 17px;
+    border-style: solid rgb(4, 126, 178);
+    height: fit-content;
+    background-color: rgb(4, 126, 178);
+}
+#login img {
+    width: 70%;
+    height: auto;
+}
+.search input{
+    flex: 1;
+    height: fit-content;
+    border: none;
+}
+#trangchu:hover, #trangchu:active,  #gioithieu:hover, #gioithieu:active, #khoahoc:hover, #khoahoc:active{
+    border: 1px solid rgb(10, 107, 168);
+    border-radius: 50px;
+    height: fit-content;
+    padding: 1px;
+    background-color:rgb(10, 107, 168);
+}
+#trangchu, #gioithieu, #khoahoc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#avatar:hover  #login_out{
+display: block;
+}
+#anh img:hover, #anh img:active {
+    opacity: 20%;
+}
+#login:hover, #login:active, #setting:hover,  #setting:active, #logout:hover, #logout:active{
+    opacity: 60%;
+}
+
+#dieukhoan {
+    margin: 15px;
+}
+#cham1 {
+    margin-right: 15px;
+}
+#cham2 {
+    margin-left: 15px;
+}
+#huongdan {
+    margin: 15px;
+}
+#contact {
+    margin: 15px;
+}
+.border {
+    margin: 0;
+    border-width: 1px;
+    border-radius: 30px;
+    border-style: solid ;
+    padding: 5px 20px;
+    background-color: rgb(97, 139, 187);
+    font-family: sans-serif;
+    
+}
+.under {
+    margin: 0;
+    position: fixed;
+    bottom:0px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+}
+
+#dieukhoan:hover, #dieukhoan:hover, #huongdan:hover, #huongdan:hover, #contact:hover, #contact:hover {
+    text-decoration: underline;
+}
+input:focus {
+    outline-width: 0;
+}
+.headerImage {
+    width: 100%;
+    object-fit: contain;
+}
+.content {
+    font-family: 'Vollkorn', serif;
+    text-align: justify;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 25px;
+    font-weight: 300;
+}
+.our {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ourteam{ 
+    height: auto;
+    width: auto;
+    background: #AFAFAF;
+    padding-top: 20px;
+}
+
+.icon_nu{
+	margin: 40px 450px;
+    padding-left: 15px;
+}
+.icon_nam1{
+	margin: 10px 450px;
+    padding-right: 35px;
+}
+.icon_nam2{
+	margin-left: 35;
+	margin-top: 40;
+	padding-bottom: 10%;
+    padding-left: 5px;
+}
+.icon_nu, .icon_nam1, .icon_nam2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 50px;
+}
+#img1, #img2, #img4 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.information {
+    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Vollkorn', serif;
+    background-color: #283C71;
+    display: flex;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.60);
+}
+.block {
+    text-align: justify;
+    margin-top: 25px;
+    margin-right: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+.blockTitle {
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.infoMapPoint {
+    height: 30px;
+    vertical-align: middle;
+}
+.mapContent {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.footer {
+    background-color: rgba(17, 65, 137, 0.7);
+}
+.copyright {
+    text-align: center;
+    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Vollkorn', serif;
+    color: rgba(255, 255, 255, 0.60);
+}
+.footer-text {
+    font-family: 'Josefin Sans';
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.footerLink {
+    text-align: center;
+    padding: 20px;
+}

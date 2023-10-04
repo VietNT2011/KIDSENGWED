@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+body {
+    background-color: #9eeee7;
+}
+ul {
+    list-style: none;
+}
+.head {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    align-items:center ;
+    background-color: rgb(7, 62, 108);
+}
+.search {
+    height: fit-content;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 60px;
+    border-style: solid ;
+    display: flex;
+    background-color: white;
+}
+/* #chucnang {
+    
+    justify-content: flex-end;
+} */
+#chucnang p {
+    color: white;
+    font-weight: bold;
+}
+#chucnang > p,#chucnang div{
+    flex: 1;
+    text-align: center;
+}
+.icon img{
+    width: 25px;
+}
+.logo img {
+    width: 270px;
+}
+#anh {
+    position: relative;
+}
+#anh img {
+    width: 50;
+    float: right;
+}
+.search, #chucnang{
+    flex:1;
+    align-items: center;
+}
+#avatar:hover #login_out{
+    display: block;
+}
+#login_out{
+    display: none;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    float: right;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid lightblue;
+    height: fit-content;
+    padding: 5px;
+    background-color: lightblue;
+    z-index: 10;
+}
+#login_out:hover {
+    display: block;
+}
+#login_out div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+}
+#login_out div img{
+    width: auto;
+    height: max-content;
+    margin-right: 5px;
+}
+#login_out div a{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+#login, #setting, #logout{
+    border-width: 1px;
+    border-radius: 17px;
+    border-style: solid rgb(4, 126, 178);
+    height: fit-content;
+    background-color: rgb(4, 126, 178);
+}
+#login img {
+    width: 70%;
+    height: auto;
+}
+.search input{
+    flex: 1;
+    height: fit-content;
+    border: none;
+}
+#trangchu:hover, #trangchu:active,  #gioithieu:hover, #gioithieu:active, #khoahoc:hover, #khoahoc:active{
+    border: 1px solid rgb(10, 107, 168);
+    border-radius: 50px;
+    height: fit-content;
+    padding: 1px;
+    background-color:rgb(10, 107, 168);
+}
+#trangchu, #gioithieu, #khoahoc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#anh:hover  #login_out{
+display: block;
+}
+#anh img:hover, #anh img:active {
+    opacity: 20%;
+}
+#login:hover, #login:active, #setting:hover,  #setting:active, #logout:hover, #logout:active{
+    opacity: 60%;
+}
+
+#lop , #kiemtra{
+    width: fit-content;
+    height: fit-content;
+    bottom: 0;
+    margin-top: 80px;
+}
+.border {
+    margin: 0;
+    border-width: 1px;
+    border-radius: 30px;
+    border-style: solid ;
+    padding: 5px 20px;
+    background-color: rgb(97, 139, 187);
+    font-family: sans-serif;
+    
+}
+input:focus {
+    outline-width: 0;
+}
+.content_logo img {
+    width: 350px;
+    margin: 20px;
+}
+.content {
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    background-color: white;
+}
+
+.blockAlignLeft {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+.blockAlignRight {
+    text-align: right;
+    display: flex;
+    flex-direction: row;
+}
+.blockText {
+    display: block;
+    flex: 1;
+    margin: 50px;
+}
+.blockImage {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.blockImage img {
+    display: flex;
+    width: 200;
+}
+.clickable {
+    font-family: 'Vollkorn', serif;
+    font-weight: bold;
+    font-size: 25px;
+    color:black;
+}
+.clickable:hover {
+    text-decoration: underline;
+}
+.detail {
+    border-top: 1px solid black;
+    padding: 1.5px;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 20px;
+}

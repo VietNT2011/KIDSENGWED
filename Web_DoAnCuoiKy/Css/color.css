@@ -1,0 +1,160 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-image: url(../Data/color/backgroundcolors.png);
+    background-size: 100% 100%;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+.header{
+    width: 100%;
+    height: 10%;
+    background-color: #003451;
+    display: flex;
+    justify-content: space-between;
+}
+.lefthd
+{
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    justify-content: space-around;
+    align-items: center;
+}
+#logo{
+   height: 50px;
+   width: 200px;
+}
+#dot
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 15px;
+    margin-right: 30px;
+}
+#maugiao
+{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.righthd
+{
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+#mausac
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#avatar
+{
+    height: 60px;
+    width: 60px;
+}
+.main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main_logo{
+   margin-top: 20px;
+   height: 15%;
+   width: 30%;
+}
+.color{
+    margin-top: 20px;
+    height: 70%;
+    width: 95%;
+    background-color: rgba(233, 238, 242, 0.9);
+    opacity: 0.9;
+    border-radius: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.toprowcolor
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bottomrowcolor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.color_item{
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.avatar{
+    position: fixed;
+    top: 0;
+    right:40px;
+}
+.options{
+    min-height: 150px;
+    min-width: 150px;
+    position: absolute;
+    top: calc(100% + 40px);
+    right: 0;
+    background-color: #5dadc7;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 20px;
+    z-index: 1;
+    display: none;
+}
+.login,
+.setting,
+.logout{
+    background-color: #056a8a;
+    margin-top: 5px;
+    text-decoration: none;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+.login a, .setting a, .logout a {
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+.login a:hover, .setting a:hover, .logout a:hover {
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+}
+.avatar:hover + .options{
+  display: flex;
+}
+.options:hover{
+    display: flex;
+}

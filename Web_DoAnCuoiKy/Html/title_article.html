@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/title_article.css">
+    <!-- thêm jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>bilingual</title>
+</head>
+<body>
+    <header>
+        <img src="../Data/Logo.png" alt="" class="header_logo">
+        <div class="lefthd">
+            <a href="">Trang chủ</a>
+            <a href="">Giới thiệu</a>
+            <a href="">khóa học</a>
+            <div class="lefthd_menu">
+                <img class="avatar" src="../Data/Avatar.png" alt="avatar">
+                <div class="options">
+                    <div class="login">
+                        <img src="../Data/icon sign in.png" alt="login">
+                        <a href="./login.html">Đăng nhập</a>
+                    </div>
+                    <div class="setting">
+                        <img src="../Data/icon setting.png" alt="setting">
+                        <a href="./caidat.html">Cài đặt</a>
+                    </div>
+                    <div class="logout">
+                        <img src="../Data/icon log out.png" alt="logout">
+                        <a href="./login.html">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="title">
+        </div>
+    </main>
+    <script>
+    $(document).ready(function() {
+        $.ajax({
+            url: '../PHP/title_article.php',
+            dataType: 'json',
+            success: function(data) {
+                var html = '';
+                html += '<div class="title_head"><h1 class="Title">Title</h1><h1 class="Translate">Translate</h1></div>';
+                html += '<div class="title_line"></div>';
+                $.each(data, function(index, item) {
+                    html += '<div class="title_item">';
+                    html += '<div class="title-el">' + item.el_title + '</div>';
+                    html += '<div class="title-vi">' + item.vi_title + '</div>';
+                    html += '<div class="title-button" data-article-id="' + item.id + '"><img src="../Data/baihoc/read.png"></div>';
+                    html += '</div>';
+                    html += '<div class="title_line"></div>';
+                });
+                $('.title').html(html);
+            }
+        });
+    });
+    $(document).ready(function() {
+    // Bắt sự kiện click trên các nút "title-button"
+    $('.title').on('click', '.title-button', function() {
+        // Lấy article_id tương ứng
+        var articleID = $(this).data('article-id');
+        // Chuyển hướng đến trang content.html với tham số articleID
+        window.location.href = '../Html/content.html?article_id=' + articleID;
+    });
+});
+
+    </script>
+</body>
+</html>

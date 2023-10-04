@@ -1,0 +1,151 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <script src="../js/greeting.js"></script> -->
+    <link rel="stylesheet" href="../Css/greeting.css">
+    <!-- thêm api key tss hỗ trợ phát âm của responsive voice -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=V2CBWNXd"></script>
+    <!-- thêm jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- them css của boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- them js của boostrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body onload="showSlides(1, 1)">
+    <nav class="head">
+        <div class="logo">
+            <a href="#"><img src="../Data/Logo.png" alt="logo"></a>
+        </div>
+        <span style="font-size: 50px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-weight: 800;">·</span>
+        <span style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Mẫu giáo</span>
+        <div class="search">
+            <div class="icon">
+                <img src="../Data/search (1).png" alt="search">
+            </div>
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+        <span style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Chào hỏi</span>
+        <div id="chucnang">
+            <div id="avatar">
+                <div id="anh">
+                    <img src="../Data/Avatar.png" alt="avatar">
+                </div>
+                <div id="Login_out">
+                    <div id="login">
+                        <img src="../Data/icon sign in.png" alt="login">
+                        <a href="./login.html">Đăng nhập</a>
+                    </div>
+                    <div id="setting">
+                        <img src="../Data/icon setting.png" alt="setting">
+                        <a href="./caidat.html">Cài đặt</a>
+                    </div>
+                    <div id="logout">
+                        <img src="../Data/icon log out.png" alt="logout">
+                        <a href="./login.html">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <a class="nextBtn" onclick="nextSlides()">
+        <div class="conversation">
+            <div class="FirstFish">
+                <img class="fish_dialogue1" src="../Data/greeting/DestinyInit.png" alt="">
+            </div>
+            <div class="FirstFish">
+                <img class="fish_dialogue1" src="../Data/greeting/Group 115.png" alt="Hello!">
+            </div>
+            <div class="FirstFish">
+                <img class="fish_dialogue1" src="../Data/greeting/Group 117.png" alt="How are you doing today?">
+            </div>
+            <div class="FirstFish">
+                <img class="fish_dialogue1" src="../Data/greeting/Group 119.png" alt="My name is Destiny. What's yours?">
+            </div>
+            <div class="FirstFish">
+                <img class="fish_dialogue1" src="../Data/greeting/Group 122.png" alt="Nice to meet you too, Nemo! Do you want to play together?">
+            </div>
+
+
+            <div class="SecondFish">
+                <img class="fish_dialogue2" src="../Data/greeting/NemoInit.png" alt="">
+            </div>
+            <div class="SecondFish">
+                <img class="fish_dialogue2" src="../Data/greeting/Group 116.png" alt="Hi!">
+            </div>
+            <div class="SecondFish">
+                <img class="fish_dialogue2" src="../Data/greeting/Group 118.png" alt="I'm good, thank you! How about you?">
+            </div>
+            <div class="SecondFish">
+                <img class="fish_dialogue2" src="../Data/greeting/Group 120.png" alt="I'm Nemo. Nice to meet you, Destiny!">
+            </div>
+            <div class="SecondFish">
+                <img class="fish_dialogue2" src="../Data/greeting/Group 121.png" alt="Sure! Let's have fun!">
+            </div>
+
+        </div>
+    </a>
+    <script type="text/javascript">
+        let slideIndex1 = 1;
+        let slideIndex2 = 1;
+
+        let slidejump1 = 1;
+        let slidejump2 = 0;
+        showSlides(slideIndex1, slideIndex2);
+
+        function nextSlides() {
+            if (slideIndex1 == 5 && slideIndex2 == 5) {
+                slideIndex1 = 1;
+                slideIndex2 = 1
+                showSlides(slideIndex1, slideIndex2);
+            }
+            else {
+                showSlides(slideIndex1 += slidejump1, slideIndex2 += slidejump2);
+                if (slidejump1 == 1) slidejump1 = 0;
+                else if (slidejump1 == 0) slidejump1 = 1;
+
+                if (slidejump2 == 1) slidejump2 = 0;
+                else if (slidejump2 == 0) slidejump2 = 1;
+            }
+
+        }
+
+        function showSlides(n1, n2) {
+            let i;
+            let slides1 = document.getElementsByClassName("FirstFish");
+            let slides2 = document.getElementsByClassName("SecondFish");
+
+            if (n1 > slides1.length) { slideIndex1 = 1 }
+            if (n1 < 1) { slideIndex1 = slides1.length }
+            for (i = 0; i < slides1.length; i++) {
+                slides1[i].style.display = "none";
+            }
+
+            if (n2 > slides2.length) { slideIndex2 = 1 }
+            if (n2 < 1) { slideIndex2 = slides2.length }
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";
+            }
+
+            slides1[slideIndex1 - 1].style.display = "block";
+            slides2[slideIndex2 - 1].style.display = "block";
+        }   
+        $('.nextBtn').click(function(){
+            // alert((slidejump1) + " " + (slidejump2))
+            if (slidejump1 == 0){
+                let dialogue = document.getElementsByClassName("fish_dialogue1");
+                responsiveVoice.speak(dialogue[slideIndex1 - 1].alt, "UK English Male");
+            }
+            else {
+                let dialogue = document.getElementsByClassName("fish_dialogue2");
+                responsiveVoice.speak(dialogue[slideIndex1 - 1].alt, "UK English Male");
+            }
+        })
+    </script>
+</body>
+
+</html>

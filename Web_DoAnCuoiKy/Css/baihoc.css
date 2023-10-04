@@ -1,0 +1,150 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    cursor: url('../Data/sea-snail\ 5.png'), auto;
+}
+a {
+    text-decoration: none;
+    cursor: url('../Data/starfish.png'), auto;
+}
+.head {
+    display: flex;
+    align-items:center ;
+    background-color: rgb(7, 62, 108);
+}
+#search {
+    height: fit-content;
+    padding: 5px;
+    border-width: 1px;
+    border-radius: 60px;
+    border-style: solid ;
+    display: flex;
+    background-color: white;
+}
+#chucnang {
+    display: flex;
+    justify-content: flex-end;
+}
+#chucnang a {
+    color: white;
+    font-weight: bold;
+}
+#chucnang > a,#chucnang div{
+    flex: 1;
+   text-align: center;
+}
+#icon img{
+    width: 25px;
+}
+#logo img {
+    width: 270px;
+}
+#anh img {
+    width: 50;
+}
+#search,#chucnang,#avatar{
+    flex:1;
+    align-items: center;
+}
+#avatar{
+    position: relative;
+}
+#login_out{
+    display: none;
+    position: absolute;
+    left: -60px;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid lightblue;
+    height: fit-content;
+    padding: 5px;
+    background-color: lightblue;
+}
+#login_out div{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding: 5px 10px;
+}
+#login_out div img{
+    width: auto;
+    height: max-content;
+    margin-right: 5px;
+}
+#login_out div p{
+margin: 0;
+}
+#login, #setting, #logout{
+    border-width: 1px;
+    border-radius: 17px;
+    border-style: solid rgb(4, 126, 178);
+    height: fit-content;
+    background-color: rgb(4, 126, 178);
+}
+#login img {
+    width: 70%;
+    height: auto;
+}
+#search input{
+    flex: 1;
+    height: fit-content;
+    border: none;
+}
+#trangchu:hover, #trangchu:active,  #gioithieu:hover, #gioithieu:active, #khoahoc:hover, #khoahoc:active{
+    border: 1px solid rgb(10, 107, 168);
+    border-radius: 50px;
+    height: fit-content;
+    padding: 1px;
+    background-color:rgb(10, 107, 168);
+}
+#trangchu, #gioithieu, #khoahoc {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#avatar:hover  #login_out{
+display: block;
+}
+#anh img:hover, #anh img:active {
+    opacity: 20%;
+}
+#login:hover, #login:active, #setting:hover,  #setting:active, #logout:hover, #logout:active{
+    opacity: 60%;
+}
+input:focus {
+    outline: none;
+}
+body {
+    background-image: url('../Data/baihoc/backgroundtrangbaihoc.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+#pic1, #pic2 {
+    width: 50%;
+}
+#pic1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    padding-left: 0px;
+    padding-top: 50px;
+}
+#pic2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: right;
+    padding-right: 0px;
+    padding-top: 50px;
+}
+#pic3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/content.css"> 
+    <!-- thêm jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <title>bilingual</title>
+</head>
+<body>
+    <header>
+        <img src="../Data/Logo.png" alt="" class="header_logo">
+        <div class="lefthd">
+            <a href="../Html/bxh.html">BXH</a>
+            <a href="">Trang chủ</a>
+            <a href="">Giới thiệu</a>
+            <a href="">khóa học</a>
+            <div class="lefthd_menu">
+                <img class="avatar" src="../Data/Avatar.png" alt="avatar">
+                <div class="options">
+                    <div class="login">
+                        <img src="../Data/icon sign in.png" alt="login">
+                        <a href="./login.html">Đăng nhập</a>
+                    </div>
+                    <div class="setting">
+                        <img src="../Data/icon setting.png" alt="setting">
+                        <a href="./caidat.html">Cài đặt</a>
+                    </div>
+                    <div class="logout">
+                        <img src="../Data/icon log out.png" alt="logout">
+                        <a href="./login.html">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+       <div class="showpoint"></div>
+        <div class="content">
+        </div>
+        <img class="notice" src="../Data/note.png" alt="">
+        <div class="popup" style="display: none;">
+            <div class="btn">
+                <button type="button" class="notebtn">Note</button>
+                <button type="button" class="vocabbtn">Vocabulary</button>
+                <button class="closebtn">close</button>
+            </div>
+            <form class="Note">
+                <label for="vocab" class="note_label">Vocabulary</label><br>
+                <input class="note_input" type="text" id="vocab" name="vocab" required><br>
+                <button type="button" id="savebtn" name="save">Save</button>
+            </form>
+            <div class="showvocab" style="display: flex; flex-direction: column; width: 100%;">
+            </div>
+        </div>
+    </main>
+
+    <script>
+    //show content
+    // lấy id từ url
+    var urlParams = new URLSearchParams(window.location.search);
+    var articleID = urlParams.get('article_id');
+    //gọi file bằng ajax
+    $.ajax({
+        url: "../PHP/content.php",
+        data: {article_id: articleID},
+        dataType: "json",
+        // lấy data dạng json đổ vào .content
+        success: function(data) {
+        var html = "";
+        html += '<div class="title">';
+        html += '<div class="title-el">' + data.el_title + '</div>';
+        html += '<div class="title-vi">' + data.vi_title + '</div>';
+        html += '</div>';
+        html += '<div class="maincontent">';
+        html += '<pre class="el-content" style="white-space: pre-wrap;" >' + data.el_content + '</pre>';
+        html += "<div class='line'></div>";
+        html += '<pre class="vi-content" style="white-space: pre-wrap;" >' + data.vi_content + '</pre>';
+        html += '</div>';
+
+        $(".content").html(html);
+        }
+    });
+    // all about notice  
+    // Bắt sự kiện click vào thẻ img để hiển thị popup form
+    $('.notice').click(function() {
+    $('.popup').show();
+    });
+    // Bắt sự kiện click vào nút Close để ẩn popup form
+    $('.closebtn').click(function() {
+    $('.popup').hide();
+    });
+
+    // Khi click vào nút "Vocabulary"
+    $('.vocabbtn').on('click', function() {
+    $('.popup').css('height', '70%');
+    // ẩn form note
+    $('.Note').hide();
+    // ẩn các từ vựng
+    $('.showvocab').show();
+    });
+
+    // Khi click vào nút "Note"
+    $('.notebtn').on('click', function() {
+    $('.popup').css('height', 'auto');
+    // ẩn các từ vựng
+    $('.showvocab').hide();
+    $('.Note').show();
+    });
+
+    // saved vocab
+    $(document).ready(function() {
+    $('#savebtn').click(function(event) {
+    event.preventDefault();
+    // Lấy dữ liệu từ form
+    var vocab = $('#vocab').val();
+    // Gửi dữ liệu lên server bằng phương thức POST
+    // Kiểm tra giá trị của input
+    if (vocab.trim() == '') {
+    // Nếu input rỗng, hiển thị thông báo lỗi
+      alert('Vui lòng nhập từ vựng!');
+    } 
+    else 
+    {
+    $.ajax({
+      type: 'POST',
+      url: '../PHP/notice.php',
+      data: {vocab: vocab},
+      dataType: 'json',
+      success: function(response) {
+        if(response.success) {
+          // Nếu lưu thành công, thông báo cho người dùng và tải lại trang
+          alert(response.message);
+          $('#vocab').val('');
+        //   location.reload();
+        } else {
+          // Nếu lưu thất bại, thông báo lỗi cho người dùng
+          alert(response.message);
+        }
+      },
+      error: function(xhr, status, error) {
+        // Xử lý lỗi nếu có
+        console.log(xhr);
+      }
+    });
+    }
+  });
+});
+
+//show vocab
+$(document).ready(function() {
+  // Sự kiện click vào nút "Vocabulary"
+  $(".vocabbtn").click(function() {
+    // Lấy ID người dùng từ Session
+    // var userID = "<?php echo $_SESSION['id']; ?>";
+    // Gửi yêu cầu Ajax đến PHP để lấy dữ liệu từ vựng
+    $.ajax({
+      url: "../PHP/shownotice.php",
+      type: "GET",
+    //   data: { user_id: userID },
+      dataType: "json",
+      success: function(response) {
+        // Tạo biến HTML để hiển thị dữ liệu từ vựng
+        var html = "";
+        $.each(response, function(index, vocab) {
+          html += '<div data-id="' + vocab.id + '" class="vocab" style="display: flex; flex-direction: row; justify-content: space-between; width:100%;">';
+          html += '<h2 data-id="' + vocab.id + '"  style=" font-family: \'kodchasan\'; font-weight:600;color: #15028B;font-size: 25px;">' + vocab.vocabulary + '</h2>';
+          html += '<div class="vocab_btn" style="display: flex; flex-direction: row; justify-content: center; align-items:center; width: 40%;">';
+          html += '<button data-id="' + vocab.id + '" class="learned" style="font-weight:bolder;font-size: 15px;border-radius: 10px; border: 2px solid;">Learned</button>';
+          html += '<a href="https://www.oxfordlearnersdictionaries.com/definition/english/' + vocab.vocabulary + '" target="_blank"><button class="detail" style="margin-left:30px; font-weight:bolder;font-size: 15px;border-radius: 10px; border: 2px solid; ">Detail</button></a>';
+          html += '</div>';
+          html += '</div>';
+          html += "<div data-id='"+ vocab.id + "' class='vocab_line' style='width: 100%; background-color: #15028B; height: 1px;'></div>";
+        });
+        // Hiển thị dữ liệu từ vựng trên trang web
+        $(".showvocab").html(html);
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr.responseText);
+      }
+    });
+  });
+});
+
+//delete notice and increase point
+$(document).on('click', '.learned', function() {
+  var vocab_id = $(this).data('id');
+  var confirm_msg = "Bạn đã học xong từ vựng này chưa?";
+  if (confirm(confirm_msg)) {
+    $.ajax({
+      url: '../PHP/deletenotice.php',
+      type: 'POST',
+      data: {id: vocab_id},
+      dataType: "json",
+      success: function(response) {
+        if(response.success) {
+          alert(response.message);
+          $('h2[data-id="' + vocab_id + '"]').remove();
+          $('div[data-id="' + vocab_id + '"]').remove();
+        //   location.reload();
+        } else {
+          alert(response.message);
+        }
+      },
+      error: function(xhr, status, error) {
+        // Xử lý lỗi nếu có
+        console.log(xhr);
+      }
+    });
+    //add point
+    $.ajax({
+      url: '../PHP/uppoint.php',
+      dataType: "json",
+      success: function(response) {
+      },
+      error: function(xhr, status, error) {
+        console.log(xhr);
+      }
+    });
+  }
+  // update point
+  var timestamp = new Date().getTime(); // Lấy thời gian hiện tại
+  $.ajax({
+            url: "../PHP/showpoint.php?timestamp=" + timestamp,
+            type: "GET",
+            dataType: "json",
+            success: function(response) {
+                if (response.success) {
+                  var point= "Point: " + response.point;
+                    $(".showpoint").html(point);
+                } else {
+                    console.log("Error");
+                }
+            }
+    });
+});
+
+//show point
+    $.ajax({
+            url: "../PHP/showpoint.php",
+            type: "GET",
+            dataType: "json",
+            success: function(response) {
+                if (response.success) {
+                  var point= "Point: " + response.point;
+                    $(".showpoint").html(point);
+                } else {
+                    console.log("Error");
+                }
+            }
+    });
+    </script>
+</body>
+</html>

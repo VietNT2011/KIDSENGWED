@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-image: url(../Data/baihoc/backgroundbaihoc.png);
+    background-size: 100% 100%;
+    cursor: url(../Data/sea-snail\ 5.png), auto;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+}

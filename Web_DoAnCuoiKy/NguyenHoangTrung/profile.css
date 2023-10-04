@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url(image/backgroundImage.jpg);
+  background-size: cover;
+  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between; */
+}
+.content {
+  background-color: rgba(46, 46, 46, 0.322);
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+}
+.info {
+  flex:4;
+  background-color: rgba(0, 0, 0, 0.534);
+  padding: 10px;
+  margin: 10px;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  margin: auto;
+}
+
+#about-me {
+  width: 50%;
+  color: white;
+  text-align: justify;
+  text-justify: inter-word;
+  color: white;
+  justify-content: center;
+  /* margin: auto; */
+}
+.selfIntro {
+  color: white;
+  text-align: justify;
+}
+
+
+table,th,td {
+  border: 3px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+  border-color: white;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.contact-me-header {
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+#msg {
+  margin-top: 50px;
+}
+
+.contactInfo {
+  flex: 8;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  background-color: rgba(0, 0, 0, 0.534);
+  margin: 10px;
+}
+.form {
+  flex: 8;
+}
+.linkList {
+  flex: 3;
+  text-align: center;
+}
+.linkIcon {
+  width: 7%;
+  margin: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: solid white;
+  color: #EAEAEA;
+  font-size: 18px;
+}
+
+textarea {
+  width: 101%;
+  margin: 20px 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: solid white;
+  color: #EAEAEA;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: #EAEAEA;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+button {
+  padding: 20px 30px;
+  font-size: 16px;
+  background: #ffffff41;
+  outline: rgba(27, 4, 240, 0);
+  color: white;
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+}
+
+label {
+  display: inline-flex;
+  color: #EAEAEA;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mySlides-image {
+  display: block;
+  margin: auto;
+}

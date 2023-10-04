@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <title>Personal Information</title>
+    <head>
+        <link rel="stylesheet" href="profile.css">
+        <link 
+        href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+        rel="stylesheet"  type='text/css'>
+        <meta charset="utf-8">
+        <script src="script.js"></script>
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">  -->
+    </head>
+    <body>
+        <div class="content">
+            <div class="info">
+                <img src="image/profileImage.jpg" alt="image" class="avatar">
+                <div id="about-me">
+                    <h1>My Info</h2>
+                    <table id="personal-info">
+                        <tr>
+                            <th>Name</th>
+                            <td>Nguyễn Hoàng Trung</td>
+                        </tr>
+                        <tr>
+                            <th>Age</th>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <th>Department</th>
+                            <td>IT</td>
+                        </tr>
+                        <tr>
+                            <th>Phone</th>
+                            <td> <i class="fa fa-phone"></i> 0911322980</td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><i class="fa fa-envelope"></i><a  onClick="javascript:window.open('mailto:4701104224@student.hcmue.edu.vn', 'my-window');event.preventDefault()"
+                                href="mailto:someone@example.com" style="color: aqua"> 4701104224@student.hcmue.edu.vn</a></td>
+                        </tr>
+                        <tr>
+                            <th>Our website</th>
+                            <td><a href="#" style="color: aqua">Click here to visit our website</a></td>
+                        </tr>
+                      </table>
+                </div>
+                <div class="selfIntro">
+                    <h2>About me</h2>
+                    <p>Hello there, I'm a sophomore at the Ho Chi Minh City University of Education. I'm still an amateur in most of my IT skills and my plan is to become a web developer in the future</p>
+                </div>
+            </div>
+            <div class="contactInfo">
+                <div class="form">
+                    <h3 class="contact-me-header">Contact me</h3>
+                <form action="https://formspree.io/f/moqzrbrb" method="POST">
+                    <label for="Name">Name</label><input type="text" name="name" required>
+                    <label for="Email">Email</label><input type="email" name="email" required>
+                    <label for="Message">Message</label>
+                    <textarea class="placeholder-style" name="Message" rows="4"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                </div>
+                
+                <div class="linkList">
+                    <a href="https://www.facebook.com/profile.php?id=100035543707770"><img src="image/facebookIcon.png" class="linkIcon" alt=""></a>
+                    <a href="https://github.com/GreciaEravinash"><img src="image/githubIcon.png" class="linkIcon" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

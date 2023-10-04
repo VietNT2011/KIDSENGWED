@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+        
+        <div class="bird-container bird-container--two">
+            <div class="bird bird--two"></div>
+        </div>
+        
+        <div class="bird-container bird-container--three">
+            <div class="bird bird--three"></div>
+        </div>
+        
+        <div class="bird-container bird-container--four">
+            <div class="bird bird--four"></div>
+        </div>
+        
+    </div>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="/home.html" class="active">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/skill.html">Skills</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Nguyễn Thanh Viết</h1>
+            <h3>And I'm a <span>FullStack Developer</span></h3>
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-github' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+                <a href="#"><i class='bx bxl-tiktok' ></i></a>
+                <div><button id="cube"onclick="toggleShape()">FullStack Skills</button></div>
+            </div>
+        </div>
+       
+        <div class="home-img" style="margin-right: 150px; margin-top: 100px;">
+            <div id="container">
+                <div id="stage">
+                  <div id="shape" class="cube backfaces">
+                    <div class="plane one" style="display: flex; align-items: flex-start;">Tailwind</div>
+                    <div class="plane two">jQuery</div>
+                    <div class="plane threes" tyle="display: flex; align-items: flex-end;">React</div>
+                    <div class="plane four" style="display: flex; align-items: flex-start;">PHP</div>
+                    <div class="plane five" >SQL</div>
+                    <div class="plane six" style="display: flex; align-items: flex-end;">Node.js</div>
+                    <div class="plane seven" style="display: flex; align-items: flex-start;">.NET</div>
+                    <div class="plane eight">HTML5</div>
+                    <div class="plane nine" style="display: flex; align-items: flex-end;">CSS3</div>
+                    <div class="plane ten" style="display: flex; align-items: flex-start;">Vue.js</div>
+                    <div class="plane eleven">Angular</div>
+                    <div class="plane twelve" style="display: flex; align-items: flex-end;">Rails</div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <script src="/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/bxh.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+    <link href="https://fonts.cdnfonts.com/css/kodchasan" rel="stylesheet">
+    <title>BXH TOP 10</title>
+</head>
+<body>
+    <main class="top10"></main>
+    <script>
+        $.ajax({
+        url: "../PHP/bxh.php",
+        dataType: "json",
+        // lấy data dạng json đổ vào .top10
+        success: function(data) {
+        var html = "";
+        html += '<h1>TOP 10 SEVER</h1>';
+        html += '<div class="title">';
+        html += '<div class="title_name">NAME</div>';
+        html += '<div class="title_point">POINT</div>';
+        html += '</div>';
+        $.each(data, function(index, item) {
+        html += '<div class="infor">';
+        html += '<div class="infor_name">' + item.full_name+ '</div>';
+        html += '<div class="infor_point">' + item.point+ '</div>';
+        html += '</div>';
+        })
+        $(".top10").html(html);
+        }
+    });
+    </script>
+</body>
+</html>

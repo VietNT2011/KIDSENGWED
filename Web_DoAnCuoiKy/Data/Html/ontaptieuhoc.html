@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>QUIZ-GAME -PraRoz Tutorial</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@200&family=Vollkorn:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/nguphap.css">
+</head>
+
+<body>
+    <nav class="head">
+        <div class="logo">
+            <a href="#"><img src="../Data/Logo.png" alt="logo"></a>
+        </div>
+        <span
+            style="font-size: 50px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-weight: 800;">·</span>
+        <span
+            style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Ôn tập</span>
+
+        <div class="search">
+            <div class="icon">
+                <img src="../Data/search (1).png" alt="search">
+            </div>
+            <input type="text" placeholder="Tìm kiếm">
+        </div>
+        <span style="font-size: 30px; color: white; align-items: center; padding-left: 20px; padding-right: 20px; font-family: Arial, Helvetica, sans-serif;">Tiểu học</span>
+        <div id="chucnang">
+            <div id="avatar">
+                <div id="anh">
+                    <img src="../Data/Avatar.png" alt="avatar">
+                    
+                </div>
+                <div id="login_out">
+                    <div id="login">
+                        <img src="../Data/icon sign in.png" alt="login">
+                        <a href="./login.html">Đăng nhập</a>
+                    </div>
+                    <div id="setting">
+                        <img src="../Data/icon setting.png" alt="setting">
+                        <a href="./caidat.html">Cài đặt</a>
+                    </div>
+                    <div id="logout">
+                        <img src="../Data/icon log out.png" alt="logout">
+                        <a href="./login.html">Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <nav class="nav-wrapper black">
+        <div class="container">
+            <a href="#ontaptieuhoc.html" class="brand-logo center">Kiểm tra</a>
+        </div>
+    </nav>
+    
+    <section class="container section">
+        <div class="row">
+            <div class="col s12 l6 offset-l3">
+                <form class="myform" name="id" onsubmit="submitted(event)">
+                <h4 class="center-align white-text">Đặt biệt danh cho bạn</h4>
+            
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+    
+                <div class="input-field">
+                    <i class="material-icons white-text prefix">account_box</i>
+                    <input type="text" class="white-text" id="name">
+                    <label for="name">Name Here</label>
+                    <p class="center"><button type="submit" class="btn blue" 
+                        onclick="this.style.display='none'">Xác nhận</button></p>
+                </div>
+    
+                <div>
+                    <p class="white-text green">Nội quy :</p>
+                    <p class="black-text white ">1. Bạn không thể bỏ qua bất kì câu hỏi nào.</p>
+                    <p class="black-text white ">2. Bạn chỉ có thể chọn 1 lần đáp án và không thể quay lại câu trước.</p>
+                    <p class="black-text white ">3. Mỗi câu trả lời đúng sẽ cho bạn 10d và kết quả sẽ được tổng hợp khi bạn hoàn thành bài kiểm tra.</p>
+                </div>
+    
+                <div class="progress yellow">
+                    <div class="indeterminate"></div>
+                </div>
+    
+                <p class="center"><a href="../Html/quiztieuhoc.html" class="btn blue">Bắt đầu</a></p>
+                
+            </form>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <script>
+    function submitted(e){
+        e.preventDefault();
+    
+        let namee = document.forms["id"]["name"].value;
+        sessionStorage.setItem("name", namee);
+    }
+    </script>
+   
+   
+</body>
+
+</html>

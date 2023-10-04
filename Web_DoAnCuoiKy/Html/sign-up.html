@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/sign-up.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/show-hide-password.js"></script>
+    <title>sign-up</title>
+</head>
+<body>
+    <header class="header">
+       <img src="../Data/Logo.png" alt="" class="header__logo">
+       <p1 class="header__title">Chào mừng bạn đến với KidsENG</p1>
+    </header>
+    <main class="main">
+        <form method = "post" action ="../PHP/sign-up.php" class = "form-signup">
+            <div class="form-group">
+                <label for="username" class="form-group__label-username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" class="form-group__input-username" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <label for="password" class="form-group__label-password">Mật khẩu</label>
+                <div class="wrapper">
+                    <input type="password" id="password" name="password" class="wrapper__input-password" placeholder="Mật khẩu">
+                    <img src="../Data/close-eye.png" alt="" class="wrapper__eye" id="eyeps">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="wrapper">
+                    <input type="text" id="email" name="email" class="wrapper__input-email" placeholder="Email">
+                </div>
+            </div>
+            <button type="submit" name="sign-up" class="form-signup__btnsubmit">Đăng ký</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <nav class="nav-list">
+            <a href="./terms_of_service.html" class="nav-list__item">Điều khoản và dịch vụ</a>
+            <span class="nav-list__item--dot">.</span>
+            <a href="./Help.html" class="nav-list__item">Hướng dẫn</a>
+            <span class="nav-list__item--dot">.</span>
+            <a href="../Html/contact.html" class="nav-list__item">Liên hệ</a>
+        </nav>
+    </footer>
+</body>
+</html>

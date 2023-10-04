@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/seaanimals.css">
+    <!-- thêm api key tss hỗ trợ phát âm của responsive voice -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=V2CBWNXd"></script>
+    <!-- thêm jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- them file xu ly -->
+    <script src="../js/seaanimals.js"></script>
+    <!-- them css của boostrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- them js của boostrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <header class = "header">
+        
+        <div class = "lefthd">
+         <img id ="logo" class = "lefthd_item"src="../Data/Logo.png" alt="">
+         <span id = "dot" class = "lefthd_item">.</span>
+         <a id = "tieuhoc" href="#" class = "lefthd_item">Tiểu học</a>
+        </div>
+        <div class = "righthd">
+         <p id = "dongvatbien" class = "righthd_item">Động vật biển</p>
+         <div class="menu">
+            <img class="avatar" src="../Data/Avatar.png" alt="avatar">
+            <div class="options">
+                <div class="login">
+                    <img src="../Data/icon sign in.png" alt="login">
+                    <a href="./login.html">Đăng nhập</a>
+                </div>
+                <div class="setting">
+                    <img src="../Data/icon setting.png" alt="setting">
+                    <a href="./caidat.html">Cài đặt</a>
+                </div>
+                <div class="logout">
+                    <img src="../Data/icon log out.png" alt="logout">
+                    <a href="./login.html">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+     </header>
+     <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+        <source src="../Data/sea_animals/sea.mp4" type="video/webm"/>
+                    
+</video>
+      
+     <main class = "main">
+        
+        
+          
+          
+         
+         <img src="../Data/sea_animals/SEA ANIMALS.png" alt="" class="main_logo">
+         
+         <div class="seaanimals">
+            
+             <div class="toprowseaanimals">
+                <img src="../Data/sea_animals/clam.png" alt="clam" class="seaanimals_item" id="clam">
+                <img src="../Data/sea_animals/coral.png" alt="coral" class="seaanimals_item" id="coral">
+                <img src="../Data/sea_animals/seahorse.png" alt="seahorse" class="seaanimals_item" id="seahorse">
+                <img src="../Data/sea_animals/fish.png" alt="fish" class="seaanimals_item" id="fish">
+                <img src="../Data/sea_animals/whale.png" alt="whale" class="seaanimals_item" id="whale">
+                
+             </div>
+             <div class="midrowseaanimals">
+                <img src="../Data/sea_animals/dolphin.png" alt="dolphin" class="seaanimals_item" id="dolphin">
+                <img src="../Data/sea_animals/shrimp.png" alt="shrimp" class="seaanimals_item" id="shrimp">
+                <img src="../Data/sea_animals/octopus.png" alt="octopus" class="seaanimals_item" id="octopus">
+                <img src="../Data/sea_animals/eel.png" alt="eel" class="seaanimals_item" id="eel">
+                <img src="../Data/sea_animals/jellyfish.png" alt="jellyfish" class="seaanimals_item" id="jellyfish">
+                
+             </div>
+             <div class="bottomrowseaanimals">
+                <img src="../Data/sea_animals/starfish.png" alt="starfish" class="seaanimals_item" id="starfish">
+                <img src="../Data/sea_animals/squid.png" alt="squid" class="seaanimals_item" id="squid">
+                <img src="../Data/sea_animals/crab.png" alt="crab" class="seaanimals_item" id="crab">
+                <img src="../Data/sea_animals/shark.png" alt="shark" class="seaanimals_item" id="shark">
+             </div>
+             </div>
+         </div>
+     </main>
+
+     <script>
+
+     </script>
+</body>
+</html>

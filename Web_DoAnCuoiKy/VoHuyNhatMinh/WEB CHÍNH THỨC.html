@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trang cá nhân</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="pngtree-blue-powder-two-color-colorful-gradient-background-image_717333.jpg">
+	<meta name="monetization" content="$ilp.uphold.com/WUdKN2pAgLAG" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style3.css">	
+	
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo">
+        <a href="#">Võ Huy Nhật Minh</a>
+        
+        <style>h3{
+          color: white;
+        }
+        </style>
+        <style>img{width: 300px;
+        height: 150px;
+        clip-path: circle(75px at 50% 50%);
+        }</style>
+        <h3>MSSV: 47.01.103.067</h3>
+        <h3>Giới tính: Nam</h3>
+        <h3>Năm sinh: 03/12/2001</h3>
+        <h3>Sở thích: xem phim, chơi game, đi phượt</h3>
+        <img src="78275310_558259278291447_4157086884314480640_n.jpg" alt="">
+        <h3>Phản hồi của bạn </h3>
+<br><input type="text"Phản hồi>
+
+      </div>
+
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="https://youtu.be/jVEi0gKepv4">My favorite song </a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100014945499362&mibextid=ZbWKwL">Facebook</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="banner"></div>
+  <div class="about">
+    <div class="content">
+		<audio controls loop autoplay="autoplay" class="center">
+	
+	<source src = "DeemoRandall-V.A-3718383.mp3" type="audio/mp3">
+</audio>
+
+	<div class="pray">Em chào cô Giang ạ !:3
+   
+  </div>
+		
+    </div>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+ 
+</body>
+</html>

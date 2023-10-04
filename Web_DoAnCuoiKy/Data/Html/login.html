@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/login.css">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/show-hide-password.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <header class="header">
+       <img src="../Data/Logo.png" alt="" class="header__logo">
+       <p1 class="header__title">Đăng nhập vào KidsENG</p1>
+    </header>
+    <main class="main">
+        <form method="post" action ="../PHP/login.php" class = "form-login">
+            <div class="form-group">
+                <label for="username" class="form-group__label-username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" class="form-group__input-username" placeholder="Tên đăng nhập">
+            </div>
+            <div class="form-group">
+                <div class="wrapper1">
+                    <label for="password" class="wrapper1__label-passwword">Mật khẩu</label>
+                    <a href="#" class="wrapper1__forgot-password">Quên mật khẩu?</a>
+                </div>
+                <div class="wrapper2">
+                    <input type="password" id="password" name="password" class="wrapper2__input-passwword" placeholder="Mật khẩu">
+                    <img src="../Data/close-eye.png" alt="" class="wrapper2__eye" id="eyeps">
+                </div>
+            </div>
+            <button type="submit" name="login" class="form-login__btnsubmit">Đăng nhập</button>
+        </form>
+        <a href="../Html/sign-up.html" id="newaccount">Tạo tài khoản mới</a>
+    </main>
+    <footer class="footer">
+        <nav class="nav-list">
+            <a href="./terms_of_service.html" class="nav-list__item">Điều khoản và dịch vụ</a>
+            <span class="nav-list__item--dot">.</span>
+            <a href="./Help.html" class="nav-list__item">Hướng dẫn</a>
+            <span class="nav-list__item--dot">.</span>
+            <a href="./contact.html" class="nav-list__item">Liên hệ</a>
+        </nav>
+    </footer>
+</body>
+</html>

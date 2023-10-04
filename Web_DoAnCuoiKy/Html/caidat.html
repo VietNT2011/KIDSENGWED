@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../Css/caidat.css">
+    <title>Setting for KidsEGN</title>
+</head>
+<body style = "background-image: url(../Data/background4.png); ">
+    <div class="container" style="margin-top: -50px;">
+        <div class="row justify-content-center mt-5">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header">Thông tin người dùng</div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group row">
+                    <div class="col-md-4">
+                      <label for="avatar">Ảnh đại diện</label>
+                      <img id ="avatar" src="" alt="Avatar" class="img-fluid">
+                    </div>
+                    <div class="col-md-8">
+                      <label for="full_name">Họ và tên</label>
+                      <input type="text" class="form-control" id="full_name" value="" readonly>
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" value="" readonly>
+                      <label for="date_of_birth">Ngày sinh</label>
+                      <input type="date" class="form-control" id="date_of_birth" value="" readonly>
+                      <label for="class">Lớp</label>
+                      <input type="text" class="form-control" id="class" value="" readonly>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-group">
+                    <label for="full_name">Họ và tên</label>
+                    <input type="text" class="form-control" id="full_name1" name="full_name" placeholder="Nhập họ và tên">
+                  </div>
+                  <div class="form-group">
+                    <label for="date_of_birth">Ngày sinh</label>
+                    <input type="date" class="form-control" id="date_of_birth1" name="date_of_birth">
+                  </div>
+                  <div class="form-group">
+                    <label for="class">Lớp</label>
+                    <input type="text" class="form-control" id="class1" name="class" placeholder="Nhập lớp">
+                  </div>
+                  <div class="form-group">
+                    <label for="currentPassword">Mật khẩu hiện tại</label>
+                    <input type="password" class="form-control" id="currentPassword" name="currentPassword">
+                  </div>
+                  <div class="form-group">
+                    <label for="newPassword">Mật khẩu Mới</label>
+                    <input type="password" class="form-control" id="newPassword" name="newPassword">
+                  </div>
+                  <div class="form-group">
+                    <label for="confirmPassword">Nhập lại mật khẩu mới</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                  </div>
+                  <button id="edit" class="btn btn-primary">Chỉnh sửa</button>
+                  <button id="changepassword" class="btn btn-primary">Đổi mật khẩu</button>
+                </form>
+                <form id="uploadForm" class="form-group" method="post" enctype="multipart/form-data" style=" display:flex;  flex-direction: column;">
+                  <input type="file" id="fileavatar" name="fileavatar">
+                  <button type="submit" id="changeavatar" class="btn btn-primary">Đổi ảnh đại diện</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- <form id="uploadForm" class="form-group" method="post" enctype="multipart/form-data">
+      <input type="file" id="fileavatar" name="fileavatar">
+      <button type="submit" id="changeavatar" class="btn btn-primary">Đổi ảnh đại diện</button>
+    </form> -->
+    <script>
+      //show infor
+        $.ajax({
+        url: '../PHP/loadinfor.php',
+        method: 'GET',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        dataType: 'json',
+        success: function(response) {
+        $('#full_name').val(response.full_name);
+        $('#email').val(response.email);
+        $('#date_of_birth').val(response.date_of_birth);
+        $('#class').val(response.class);
+        $('#avatar').attr('src', response.avatar);
+        },
+        error: function() {
+        alert('Lỗi khi tải dữ liệu từ server');
+        }
+    });
+    //update infor
+    $(document).ready(function() {
+    $('#edit').click(function(event) {
+    event.preventDefault();
+    var full_name = $("#full_name1").val();
+    var date_of_birth = $("#date_of_birth1").val();
+    var class_name = $("#class1").val();
+    $.ajax({
+      url: "../PHP/updateinfor.php",
+      type: "post",
+      data: {full_name: full_name, date_of_birth: date_of_birth,  class: class_name},
+      success: function(response) {
+        // Handle the response from PHP
+        if (response) {
+          alert("Cập nhật thông tin thành công!");
+          location.reload();
+        }
+        else {
+          alert("Cập nhật thông tin không thành công. Vui lòng thử lại.");
+        }
+      }
+    });
+  });
+});
+// update password
+$(document).ready(function() {
+  $('#changepassword').click(function(event) {
+    event.preventDefault();
+    var currentPassword = $('#currentPassword').val();
+    var newPassword = $('#newPassword').val();
+    var confirmPassword = $('#confirmPassword').val();
+    
+    $.ajax({
+      url: '../PHP/updatepassword.php',
+      type: 'POST',
+      data: {
+        currentPassword: currentPassword,
+        newPassword: newPassword,
+        confirmPassword: confirmPassword
+      },
+      dataType: 'json',
+      success: function(response) {
+        if (response.success) {
+          alert(response.message);
+        } else {
+          alert('Lỗi: ' + response.message);
+        }
+      },
+      error: function(xhr, status, error) {
+        alert('Lỗi: ' + error);
+      }
+    });
+  });
+});
+
+// Attach a click event handler to the "changeavatar" button
+$(document).ready(function() {
+  $('#uploadForm').submit(function(event) {
+    event.preventDefault();
+    var formData = new FormData(this);
+    $.ajax({
+      url: '../PHP/uploadavatar.php',
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      dataType: 'json',
+      success: function(response) {
+        // Xử lý kết quả trả về
+        if(response.success)
+        {
+          alert('Thay đổi ảnh đại diện thành công!');
+          location.reload();
+        }
+        else
+        {
+          alert(response);
+        }
+      },
+      error: function() {
+        // Xử lý lỗi
+      }
+    });
+  });
+});
+    </script>
+</body>
+</html>
